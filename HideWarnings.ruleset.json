@@ -1,0 +1,9 @@
+{
+    "name": "Hide Warnings",
+    "rules": [
+        {                    
+            "id": "AA0248",                    
+            "action": "None"
+        }
+    ]
+}
