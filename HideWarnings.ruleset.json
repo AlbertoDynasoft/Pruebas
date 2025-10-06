@@ -2,7 +2,7 @@
     "name": "Hide Warnings",
     "rules": [
         {                    
-            "id": "AA0248",                    
+            "id": "AL0603",                    
             "action": "None"
         }
     ]

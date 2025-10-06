@@ -37,6 +37,7 @@ page 51149 "AMM Prueba Pagina"
     trigger OnOpenPage()
     var
         PruebaTabla: Record "AMM Prueba Tabla";
+        PruebaCodeunit: Codeunit "AMM Pruebas";
     begin
         if PruebaTabla.FindLast() then begin
             Rec.ID := PruebaTabla.ID + 1;
@@ -46,5 +47,6 @@ page 51149 "AMM Prueba Pagina"
             Rec.MyOption := "AMM Colors"::Campo1.AsInteger() + 1;
             Rec.Insert();
         end;
+        PruebaCodeunit.Run();
     end;
 }

@@ -1,13 +1,17 @@
-pageextension 51150 CustomerListExt extends "Customer List"
+pageextension 51150 "AMM CustomerListExt" extends "Customer List"
 {
     trigger OnOpenPage();
     var
-        result: Integer;
-    begin        
-        // The following line will trigger the warning
-        // AA0001 "There must be exactly one space character on each side 
-        // of a binary operator such as := + - AND OR =." 
-        result := 2+2; 
-        Message('2 + 2 = ' + Format(result));
+        ImplementZYTest: Codeunit "AMM ImplementZYTest";
+        ZYTestInterface: Interface "AMM ZYTestInterface";
+    begin
+        ZYTestInterface := ImplementZYTest;
+        ZYTestInterface.ShowMessage();
+        Message('%1',CastInterface(ZYTestInterface));
+    end;
+
+    procedure CastInterface(Interface: Interface "AMM ZYTestInterface"): Interface "AMM InterfaceExt"
+    begin
+        exit(Interface as "AMM InterfaceExt");
     end;
 }
