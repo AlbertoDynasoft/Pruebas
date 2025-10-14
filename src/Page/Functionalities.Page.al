@@ -42,6 +42,28 @@ page 51151 "AMM Functionalities"
                     end;
                 }
             }
+            group("Numeric Functions"){
+                action("Numeric Data Type"){
+                    ApplicationArea = All;
+                    ToolTip = 'Runs the "Numeric Data Type" action';
+                    Image = Change;
+                    trigger OnAction()
+                    begin
+                        ;
+                    end;
+                }
+            }
+            group("Array Functions"){
+                action("Array Data Type"){
+                    ApplicationArea = All;
+                    ToolTip = 'Runs the "Array Data Type" action';
+                    Image = Change;
+                    trigger OnAction()
+                    begin
+                        ;
+                    end;
+                }
+            }
         }
     }
 }
